@@ -1,4 +1,4 @@
-{pkgs, ...}:
+{ config, pkgs, ...}:
 {
     require =
     [
@@ -19,16 +19,20 @@
         initrd.availableKernelModules = [ "xhci_pci" "ehci_pci" "ahci" ];
     };
 
-    filesystems."/" = {
+    fileSystems."/" = {
         device = "/dev/disk/by-label/nixos";
-        options = "rw,data=ordered,realtime";
+        #options = "rw,data=ordered,realtime";
         fsType = "ext4";
     };
 
-    filesystems."/boot" = {
-        device = "/dev/disk/by-label/boot";
-        options = "";
-        fsType = "vfat";
+    #fileSystems."/boot" = {
+    #    device = "/dev/disk/by-label/boot";
+    #    options = "";
+    #    fsType = "vfat";
+    #};
+
+    fileSystems."/home/alex/storage" = {
+        device = "/dev/disk/by-label/data";
     };
 
     swapDevices = [
@@ -36,7 +40,7 @@
     ];
 
     networking = {
-        hostname = "white-rabbit";
+        hostName = "white-rabbit";
         networkmanager.enable = true;
     };
 

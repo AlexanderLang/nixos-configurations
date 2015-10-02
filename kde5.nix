@@ -24,5 +24,7 @@ with lib;
 
     environment.systemPackages = with pkgs; [
         kde5.sddm-kcm
+        kde5.kate
+        qvim
     ];
 }
