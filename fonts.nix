@@ -11,4 +11,6 @@
             ubuntu_font_family
             unifont
         ];
+     };
 }
+

@@ -22,9 +22,30 @@ with lib;
         qt4 = in_pkgs.qt48;
     };
 
+    hardware.pulseaudio = {
+        enable = true;
+        systemWide = true;
+        package = pkgs.pulseaudioFull;
+    };
+
     environment.systemPackages = with pkgs; [
         kde5.sddm-kcm
         kde5.kate
+        kde5.gwenview
+        kde5.okular
+        kde5.bluez-qt
+        kde5.marble
+        kde5.kwallet
+        kde5.kwalletmanager
+        kde5.dolphin-plugins
+        kde5.ark
+        kde5.baloo
+        kde5.bluedevil
+        kde5.frameworkintegration
+        kde5.kaccounts-providers
+        kde5.kaccounts-integration
+        kde5.kde-baseapps
+        pavucontrol
         qvim
     ];
 }

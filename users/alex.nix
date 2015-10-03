@@ -6,8 +6,9 @@ with pkgs.lib;
         createHome = true;
         uid = 1000;
         group = "users";
-        extraGroups = [ "wheel" "networkmanager" "dialout" ];
+        extraGroups = [ "wheel" "networkmanager" "dialout" "audio" ];
         home = "/home/alex";
         shell = "/run/current-system/sw/bin/zsh";
     };
 }
+

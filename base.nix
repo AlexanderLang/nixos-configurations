@@ -13,6 +13,7 @@ with pkgs;
         subversion
         vim
         nano
+        gnupg
     ];
 
     programs.zsh = {
@@ -30,9 +31,17 @@ with pkgs;
         };
     };
 
+    # Select internationalisation properties.
+    i18n = {
+        consoleFont = "Lat2-Terminus16";
+        consoleKeyMap = "us";
+        defaultLocale = "en_US.UTF-8";
+    };
+
     nixpkgs.config = {
         allowUnfree = true;
     };
 
     time.timeZone = "Europe/Vienna";
 }
+
