@@ -23,5 +23,9 @@ with pkgs;
         python34Packages.pyqt5
         python34Packages.pyserial
     ];
+    
+    services.udev.extraRules = ''
+        ATTRS{idVendor}=="1d50", ATTR{idProduct}=="6089", SYMLINK+="hackrf-one-%k", MODE="660", GROUP="plugdev"
+    '';
 }
 

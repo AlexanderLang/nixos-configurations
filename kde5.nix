@@ -16,12 +16,18 @@ with lib;
         theme = "maui";
     };
 
-    nixpkgs.config.packagesOverrides = in_pkgs : rec
-    {
-        # so pkgs dependend on qt4 don't pull full KDE workspace
-        qt4 = in_pkgs.qt48;
+    #nixpkgs.config.packageOverrides = in_pkgs : rec
+    #{
+    #    # so pkgs dependend on qt4 don't pull full KDE workspace
+    #    qt4 = in_pkgs.qt48;
+    #};
+    
+    nixpkgs.config.packageOverrides = super: let self = super.pkgs; in rec {
+        plasma5_stable = self.plasma5_latest;
+        kdeApps_stable = self.kdeApps_latest;
+        qt4 = self.qt48;
     };
-
+    
     hardware.pulseaudio = {
         enable = true;
         systemWide = true;

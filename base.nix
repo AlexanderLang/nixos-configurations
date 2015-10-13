@@ -14,6 +14,7 @@ with pkgs;
         vim
         nano
         gnupg
+        usbutils
     ];
 
     programs.zsh = {
@@ -22,6 +23,10 @@ with pkgs;
     };
 
     users.defaultUserShell = "/run/current-system/sw/bin/zsh";
+    
+    users.extraGroups = {
+        plugdev = { gid = 500; };
+    };
 
     system = {
         stateVersion = "15.09";
