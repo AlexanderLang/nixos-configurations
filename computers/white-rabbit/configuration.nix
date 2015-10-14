@@ -48,6 +48,8 @@
         enable = true;
         twoFingerScroll = true;
     };
+    
+    hardware.bluetooth.enable = true;
 
 }
 
