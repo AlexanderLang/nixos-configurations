@@ -35,6 +35,15 @@ with lib;
     };
 
     environment.systemPackages = with pkgs; [
+        sddm
+        kde5.sddm-kcm
+        kde5.plasma-desktop
+        kde5.plasma-framework
+        kde5.plasma-mediacenter
+        kde5.plasma-nm
+        kde5.plasma-sdk
+        kde5.plasma-workspace
+        kde5.plasma-workspace-wallpapers
         kde5.sddm-kcm
         kde5.kate
         kde5.gwenview

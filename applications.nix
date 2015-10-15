@@ -16,6 +16,8 @@ with pkgs;
         gnuradio-full
         libreoffice
         hackrf
+        mariadb
+        mysqlWorkbench
         python3
         python34Packages.dateutil
         python34Packages.pyparsing
@@ -34,6 +36,10 @@ with pkgs;
     
     environment.profileRelativeEnvVars = {
         PYTHONPATH = [ "/lib/python3.4/site-packages" ];
+    };
+    
+    nixpkgs.config = {
+        chromium.enablePepperFlash = true;
     };
 }
 

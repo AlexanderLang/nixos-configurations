@@ -48,5 +48,7 @@ with pkgs;
     };
 
     time.timeZone = "Europe/Vienna";
+    
+    security.rtkit.enable = true;
 }
 

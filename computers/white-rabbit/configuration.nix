@@ -17,6 +17,7 @@
             efi.canTouchEfiVariables = true;
         };
         initrd.availableKernelModules = [ "xhci_pci" "ehci_pci" "ahci" ];
+        blacklistedKernelModules = [ "kvm" ];
     };
 
     fileSystems."/" = {
@@ -42,6 +43,7 @@
     networking = {
         hostName = "white-rabbit";
         networkmanager.enable = true;
+        enableRTL8192cFirmware = true;
     };
 
     services.xserver.synaptics = {
