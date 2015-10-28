@@ -5,10 +5,14 @@ with pkgs;
     [
         chromium
         thunderbird
-        vlc
+        vlc_qt5
+        openh264
+        mplayer
         dropbox
         kicad
         freecad
+        transmission
+        transmission_gtk
         texmaker
         idea.pycharm-professional
         idea.webstorm

@@ -15,6 +15,11 @@ with pkgs;
         nano
         gnupg
         usbutils
+        pciutils
+        gcc
+        htop
+        openjdk
+        minicom
     ];
 
     programs.zsh = {

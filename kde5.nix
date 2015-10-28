@@ -13,7 +13,7 @@ with lib;
 
     services.xserver.displayManager.sddm = {
         enable = true;
-        theme = "maui";
+        theme = "maldives";
     };
 
     #nixpkgs.config.packageOverrides = in_pkgs : rec
@@ -62,5 +62,7 @@ with lib;
         kde5.kde-baseapps
         pavucontrol
         qvim
+        kde5.kcodecs
+        kde5.kmediaplayer
     ];
 }
