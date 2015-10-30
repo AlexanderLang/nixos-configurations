@@ -14,6 +14,7 @@
         kernelModules = [ "kvm-intel" ];
         loader = {
             grub.enable = true;
+            grub.device = "/dev/sda";
             grub.efiSupport = true;
             efi.canTouchEfiVariables = true;
         };
