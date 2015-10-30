@@ -21,23 +21,27 @@
     };
 
     fileSystems."/" = {
-        device = "/dev/disk/by-label/nixos";
+        device = "/dev/sda3";
         #options = "rw,data=ordered,realtime";
         fsType = "ext4";
     };
 
-    #fileSystems."/boot" = {
-    #    device = "/dev/disk/by-label/boot";
-    #    options = "";
-    #    fsType = "vfat";
-    #};
+    fileSystems."/boot" = {
+        device = "/dev/sda1";
+        options = "";
+        fsType = "vfat";
+    };
+    
+    fileSystems."/media/kubuntu" = {
+        device = "/dev/sda4";
+    };
 
     fileSystems."/home/alex/storage" = {
-        device = "/dev/disk/by-label/data";
+        device = "/dev/sda5";
     };
 
     swapDevices = [
-        { device = "/dev/disk/by-label/swap"; }
+        { device = "/dev/sda2"; }
     ];
 
     networking = {

@@ -1,8 +1,7 @@
 { config, pkgs, ... }:
 with pkgs;
 {
-    environment.systemPackages =
-    [
+    environment.systemPackages = [
         chromium
         thunderbird
         vlc_qt5
@@ -18,8 +17,10 @@ with pkgs;
         idea.webstorm
         keepass
         gnuradio-full
+        gqrx
         libreoffice
         hackrf
+        arduino
         mariadb
         mysqlWorkbench
         python3
