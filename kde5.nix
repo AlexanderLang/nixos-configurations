@@ -63,7 +63,6 @@ with lib;
         pavucontrol
         qvim
         kde5.kcodecs
-        kde5.kmediaplayer
         kde5.dragon
     ];
 }

@@ -13,7 +13,8 @@
     boot = {
         kernelModules = [ "kvm-intel" ];
         loader = {
-            gummiboot.enable = true;
+            grub.enable = true;
+            grub.efiSupport = true;
             efi.canTouchEfiVariables = true;
         };
         initrd.availableKernelModules = [ "xhci_pci" "ehci_pci" "ahci" ];

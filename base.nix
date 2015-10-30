@@ -34,10 +34,10 @@ with pkgs;
     };
 
     system = {
-        stateVersion = "15.09";
+        stateVersion = "16.03";
         autoUpgrade = {
             enable = true;
-            channel = "https://nixos.org/channels/nixos-15.09";
+            channel = "https://nixos.org/channels/nixos-16.03";
         };
     };
 
