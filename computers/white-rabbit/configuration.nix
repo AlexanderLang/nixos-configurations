@@ -16,6 +16,7 @@
     musnix.enable = true;
 
     nix.maxJobs = 4;
+    nix.nixPath = [ "/home/alex/nix-stuff" "nixos-config=/etc/nixos/configuration.nix" ];
 
     boot = {
         kernelModules = [ "kvm-intel" ];
@@ -38,7 +39,6 @@
 
     fileSystems."/boot" = {
         device = "/dev/sda1";
-        options = "";
         fsType = "vfat";
     };
     
