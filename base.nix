@@ -20,6 +20,7 @@ with pkgs;
         htop
         openjdk
         minicom
+        refind
     ];
 
     programs.zsh = {
@@ -31,14 +32,6 @@ with pkgs;
     
     users.extraGroups = {
         plugdev = { gid = 500; };
-    };
-
-    system = {
-        stateVersion = "16.03";
-        autoUpgrade = {
-            enable = true;
-            channel = "https://nixos.org/channels/nixos-16.03";
-        };
     };
 
     # Select internationalisation properties.

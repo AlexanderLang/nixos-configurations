@@ -8,14 +8,22 @@
         ../../users/alex.nix
     ];
 
+    imports =
+    [
+        ../../../musnix/default.nix
+    ];
+
+    musnix.enable = true;
+
     nix.maxJobs = 4;
 
     boot = {
         kernelModules = [ "kvm-intel" ];
         loader = {
-            grub.enable = true;
-            grub.device = "/dev/sda";
-            grub.efiSupport = true;
+            #grub.enable = true;
+            #grub.device = "/dev/sda";
+            #grub.efiSupport = true;
+            gummiboot.enable = true;
             efi.canTouchEfiVariables = true;
         };
         initrd.availableKernelModules = [ "xhci_pci" "ehci_pci" "ahci" ];
